@@ -17,6 +17,7 @@ library(data.table)
 # http://files.grouplens.org/datasets/movielens/ml-10m.zip
 
 dl <- tempfile()
+#download.file("https://files.grouplens.org/datasets/movielens/ml-10m.zip", dl)
 download.file("https://files.grouplens.org/datasets/movielens/ml-10m.zip", dl)
 
 ratings <- fread(text = gsub("::", "\t", readLines(unzip(dl, "ml-10M100K/ratings.dat"))),
